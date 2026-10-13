@@ -1,19 +1,32 @@
 import { FormEvent, ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import photo1 from "./assets/photo1.jpg";
+import photo2 from "./assets/photo2.jpg";
+import photo3 from "./assets/photo3.jpeg";
+import photo4 from "./assets/photo4.jpg";
+import isimbi from "./assets/isimbi.jpeg";
+import arsene from "./assets/arsene.jpeg";
+import gallery1 from "./assets/gallery1.jpeg";
+import gallery2 from "./assets/gallery2.jpeg";
+import gallery3 from "./assets/gallery3.jpeg";
+import gallery4 from "./assets/gallery4.jpeg";
+import gallery5 from "./assets/gallery5.jpeg";
+import gallery6 from "./assets/gallery6.jpg";
+
 
 
 const photos = {
-  hero: "/src/assets/photo1.jpg",
-  storyOne: "/src/assets/photo4.jpg",
-  storyTwo: "/src/assets/photo3.jpeg",
-  bride: "/src/assets/isimbi2.jpeg",
-  groom: "/src/assets/arsene.jpeg",
+  hero: photo1,
+  storyOne: photo4,
+  storyTwo: photo3,
+  bride: isimbi,
+  groom: arsene,
   gallery: [
-    "/src/assets/gallery1.jpeg",
-    "/src/assets/gallery2.jpeg",
-    "/src/assets/gallery3.jpeg",
-    "/src/assets/gallery4.jpeg",
-    "/src/assets/gallery5.jpeg",
-    "/src/assets/gallery6.jpg",
+    gallery1,
+gallery2,
+gallery3,
+gallery4,
+gallery5,
+gallery6, 
   ],
 };
 
