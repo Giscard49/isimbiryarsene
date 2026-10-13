@@ -11,6 +11,7 @@
   --cocoa: #43352e;
   --brown: #6c5549;
   --gold: #a88455;
+  --Purple: #800080;
   --line: rgba(67, 53, 46, 0.16);
   --serif: "Cormorant Garamond", Georgia, serif;
   --display: "Italiana", Georgia, serif;
@@ -145,6 +146,7 @@ img { display: block; width: 100%; }
 .swatches { display: flex; justify-content: center; margin: 28px 0 18px; }
 .swatch { width: 39px; height: 39px; margin-left: -5px; border: 2px solid var(--brown); border-radius: 50%; background: #f4eee1; }
 .swatch--1 { background: #d7c4a7; }.swatch--2 { background: #cdaea6; }.swatch--3 { background: #89917b; }.swatch--4 { background: #5c463d; }
+.swatch--5 { background: #800080; }
 .dress-frame small { color: var(--champagne); font: 500 7px/1.5 var(--sans); letter-spacing: .13em; text-transform: uppercase; }
 
 .rsvp { background: var(--ivory); }
@@ -201,6 +203,10 @@ footer > p { margin: 0; color: rgba(255,255,255,.7); font-size: 16px; line-heigh
 .lightbox img { width: min(100%, 520px); max-height: 84vh; object-fit: contain; }
 .lightbox button { position: absolute; top: 22px; right: 22px; display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; color: white; background: transparent; cursor: pointer; }
 
+.date {
+  letter-spacing: 6px;
+  font-size: 26px;
+}
 
 .contact-person {
   margin-top: 16px;
@@ -218,44 +224,71 @@ footer > p { margin: 0; color: rgba(255,255,255,.7); font-size: 16px; line-heigh
 }
 
 .contact-btn {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-gap: 8px;
-padding: 10px 18px;
-min-width: 92px;
-box-sizing: border-box;
-border-radius: 8px;
-text-decoration: none;
-font-weight: 600;
-border: 1px solid transparent;
-cursor: pointer;
-transition: transform 0.2s ease, opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 9px 16px;
+  min-width: 100px;
+  box-sizing: border-box;
+  border: 1px solid rgba(220, 199, 165, 0.55);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--champagne);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.contact-btn {
-transform: translateY(-2px);
-opacity: 0.9;
-}
 .contact-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  background: rgba(220, 199, 165, 0.12);
+  border-color: var(--champagne);
+  transform: translateY(-1px);
+  opacity: 1;
 }
 
-.call-btn {
-  background: #608ef0;
-  color: white;
-}
-
+.call-btn,
 .whatsapp-btn {
-  background: #83f6ad;
-  color: white;
+  background: transparent;
+  color: var(--champagne);
+}
+.faq-answer {
+  white-space: pre-line;
 }
 
-.contact-btn svg {
-  width: 18px;
-  height: 18px;
+.contact-actions .contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 9px 16px;
+  min-width: 100px;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.contact-actions .contact-btn svg {
+  flex-shrink: 0;
+}
+
+.faq-answer a[href^="tel:"] {
+  color: var(--cha);
+  text-decoration: underline;
+  font-family: var(--sans);
+  font-size: 12px;
+  text-underline-offset: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.faq-answer a[href^="tel:"]:hover {
+  color: white;
 }
 .footer-contact-buttons {
   display: flex;

@@ -5,7 +5,7 @@ const photos = {
   hero: "/src/assets/photo1.jpg",
   storyOne: "/src/assets/photo4.jpg",
   storyTwo: "/src/assets/photo3.jpeg",
-  bride: "/src/assets/isimbi.jpeg",
+  bride: "/src/assets/isimbi2.jpeg",
   groom: "/src/assets/arsene.jpeg",
   gallery: [
     "/src/assets/gallery1.jpeg",
@@ -99,8 +99,8 @@ const faqs = [
   ["What time should I arrive?", "Please arrive 30 minutes before the ceremony begins, allowing plenty of time to be seated."],
   ["Are children invited?", "Yes, of course! Children are a blessing and are very welcome to celebrate with us. We just kindly ask you to keep them close with you."],
   ["May I bring a plus-one?", " Yes! We would love for you to share this day with your loved one."],
-  ["What should I wear?", ""],
-  ["Is transport available?", ""],
+  ["What should I wear?", "Our dress code is Formal. We invite you to wear elegant, timeless attire in soft, romantic tones. Please avoid jeans. We look forward to celebrating with you!"],
+  ["Is transport available?", "Yes! For transport arrangements, please contact the respective coordinators:\n\n\Isimbi’s side: 0781 635 574\n\nArsene’s side: 0788 415 963\n\nPlease contact the appropriate coordinator for more information about transport arrangements. We look forward to celebrating with you!"],
 ];
 
 function App() {
@@ -193,7 +193,7 @@ function App() {
             <p className="overline">Together with our families</p> <br/> <br/><br/> <br/><br/> 
             <h1><span>Arsene </span>&<span>ISIMBI</span></h1>
             <div className="hero-rule"><i /><Icon name="heart" size={13} /><i /></div>
-            <p className="date">26 · 12 · 2026</p>
+            <p className="date" style={{ letterSpacing: "6px", fontSize: "15px", fontWeight: "bold" }}>26 · 12 · 2026</p>
             <p className="invitation">Joyfully invite you to celebrate<br />the beginning of their forever</p>
             <a href="#welcome" className="explore">Explore our day<span><Icon name="arrow" size={14} /></span></a>
           </div>
@@ -273,7 +273,7 @@ function App() {
             <div className="venue-detail"><Icon name="location" /><div><strong>Parking</strong><span>[Add valet, parking or accessibility details.]</span></div></div> */}
            <Button 
   variant="outline"
-  onClick={() => window.open("https://www.google.com/maps/dir//Pyramidal+Garden,+X4Q3%2BQM,+KK+15+Rd,+Kigali/@-1.9827557,30.1473825,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x19dca90028c8ee63:0x9c5af20c5ecab706!2m2!1d30.1016781!2d-2.0091853?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", "_blank")}
+  onClick={() => window.open("https://www.google.com/maps/place/X4Q3%2BQM+Pyramidal+Garden,+KK+15+Rd,+Kigali/@-2.0091853,30.1016781,16z/data=!4m6!3m5!1s0x19dca90028c8ee63:0x9c5af20c5ecab706!8m2!3d-2.0091853!4d30.1016781!16s%2Fg%2F11z0547r_n?g_ep=Eg1tbF8yMDI2MTAxMV8wIJvbDyoASAJQAg%3D%3D", "_blank")}
 >
   Open in maps
 </Button>
@@ -299,9 +299,9 @@ function App() {
             <h3>Your chosen attire</h3>
             <p>We invite you to dress in timeless silhouettes and soft, romantic tones. Please avoid jeans.</p>
             <div className="swatches" aria-label="Suggested colour palette">
-              {["Ivory", "Champagne", "Blush", "Sage", "Cocoa"].map((colour, i) => <span key={colour} className={`swatch swatch--${i}`} title={colour} />)}
+              {["Ivory", "Champagne", "Blush", "Sage", "Cocoa", "Purple" ].map((colour, i) => <span key={colour} className={`swatch swatch--${i}`} title={colour} />)}
             </div>
-            <small>Our palette · ivory · champagne · blush · sage</small>
+            <small>Our palette · ivory · champagne · blush · sage . Purple</small>
           </div>
         </section>
 
@@ -363,14 +363,23 @@ function App() {
     Mobile Money
   </Button>
 
-  <Button
-    variant="outline"
-    onClick={() => {
-      window.location.href = "tel:*182*1*1*0788753696%23";
-    }}
-  >
-    Bank of Kigali
-  </Button>
+   <Button
+  variant="outline"
+  onClick={() => {
+    alert(
+      "Bank: Zigama CSS\n" +
+      "Account Number: 7073026\n\n" +
+      "Please use this account for our wedding contribution."
+    );
+
+    window.open(
+      "https://ebanking.zigamacss.rw/itb",
+      "_blank"
+    );
+  }}
+>
+  Zigama CSS
+</Button>
 </div>
 
 
@@ -384,7 +393,23 @@ function App() {
                 <button onClick={() => setOpenFaq(openFaq === index ? null : index)} aria-expanded={openFaq === index}>
                   <span>{String(index + 1).padStart(2, "0")}</span><strong>{question}</strong><i>{openFaq === index ? "−" : "+"}</i>
                 </button>
-                <div className={openFaq === index ? "faq-answer faq-answer--open" : "faq-answer"}><p>{answer}</p></div>
+                <div className={openFaq === index ? "faq-answer faq-answer--open" : "faq-answer"}>
+  {question === "Is transport available?" ? (
+    <p>
+      Yes! For transport arrangements, please contact the respective coordinators.
+      <br /><br />
+      Isimbi’s side:{" "}
+      <a href="tel:+250781635574">0781 635 574</a>
+      <br /><br />
+      Arsene’s side:{" "}
+      <a href="tel:+250788415963">0788 415 963</a>
+      <br /><br />
+      Please contact the appropriate coordinator for more information about transport arrangements. We look forward to celebrating with you!
+    </p>
+  ) : (
+    <p>{answer}</p>
+  )}
+</div>
               </article>
             ))}
           </div>
