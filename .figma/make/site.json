@@ -1,0 +1,10 @@
+{
+  "description": "A luxurious mobile-first wedding invitation site offering countdowns, RSVP, schedules, galleries, and travel info to elegantly engage guests.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
