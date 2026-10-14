@@ -403,7 +403,7 @@ function App() {
 
     
 
-<a
+{/* <a
   href="/src/assets/invitation.pdf"
   download="Arsene-and-Isimbi-Wedding-Invitation"
   style={{
@@ -426,7 +426,7 @@ function App() {
 >
   <span className="download-icon" aria-hidden="true">↓</span>
   <span>DOWNLOAD WEDDING INVITATION</span>
-</a>
+</a> */}
 
 
 
