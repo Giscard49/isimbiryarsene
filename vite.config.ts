@@ -86,7 +86,7 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
     return html.replace(`<!-- ${slotName} -->`, content)
   }
 
-  const title = config.title ?? "Wedding invitation Arsene & Isimbi"
+  const title = config.title ?? "Arsene & Isimbi's Wedding Invitation"
   const description = config.description ?? ''
   // Imported HTML keeps its own favicon; new Makes default to the Make product icon.
   const favicon = ''
