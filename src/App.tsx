@@ -3,7 +3,7 @@ import photo1 from "./assets/photo1.jpg";
 import photo2 from "./assets/photo2.jpg";
 import photo3 from "./assets/photo3.jpeg";
 import photo4 from "./assets/photo4.jpg";
-import isimbi from "./assets/isimbi.jpeg";
+import isimbi2 from "./assets/isimbi2.jpeg";
 import arsene from "./assets/arsene.jpeg";
 import gallery1 from "./assets/gallery1.jpeg";
 import gallery2 from "./assets/gallery2.jpeg";
@@ -18,7 +18,7 @@ const photos = {
   hero: photo1,
   storyOne: photo4,
   storyTwo: photo3,
-  bride: isimbi,
+  bride: isimbi2,
   groom: arsene,
   gallery: [
     gallery1,
@@ -208,7 +208,7 @@ function App() {
             <div className="hero-rule"><i /><Icon name="heart" size={13} /><i /></div>
             <p className="date" style={{ letterSpacing: "6px", fontSize: "15px", fontWeight: "bold" }}>26 · 12 · 2026</p>
             <p className="invitation">Joyfully invite you to celebrate<br />the beginning of their forever</p>
-            <a href="#welcome" className="explore">Explore our day<span><Icon name="arrow" size={14} /></span></a>
+            <a href="#welcome" className="explore">Explore our day</a>
           </div>
           <span className="hero-side">The beginning of forever</span>
         </section>
