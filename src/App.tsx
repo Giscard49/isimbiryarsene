@@ -11,7 +11,7 @@ import gallery3 from "./assets/gallery3.jpeg";
 import gallery4 from "./assets/gallery4.jpeg";
 import gallery5 from "./assets/gallery5.jpeg";
 import gallery6 from "./assets/gallery6.jpg";
-import invitation from "./assets/invitation.png";
+import invitation from "./assets/invitation.pdf";
 
 
 
@@ -30,6 +30,8 @@ gallery5,
 gallery6, 
   ],
 };
+
+
 
 type IconName =
   | "arrow"
@@ -400,14 +402,32 @@ function App() {
         </section>
 
     
+
 <a
-  href="/src/assets/invitation.png"
+  href="/src/assets/invitation.pdf"
   download="Arsene-and-Isimbi-Wedding-Invitation"
+  style={{
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+    width: "fit-content",
+    maxWidth: "90%",
+    margin: "0 auto",
+    position: "relative",
+    left: "50%",
+    transform: "translateX(-50%)",
+    padding: "14px 18px",
+    borderRadius: "18px",
+    boxSizing: "border-box",
+    textAlign: "center",
+  }}
   className="download-invitation-btn"
 >
   <span className="download-icon" aria-hidden="true">↓</span>
   <span>DOWNLOAD WEDDING INVITATION</span>
 </a>
+
 
 
         <section className="faq section-pad" id="faq">
