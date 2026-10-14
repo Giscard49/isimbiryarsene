@@ -204,7 +204,7 @@ function App() {
           <img src={photos.hero} alt="A couple sharing a quiet moment on their wedding day" />
           <div className="hero-shade" />
           <div className="hero-copy">
-            <p className="overline">Together with our families</p> <br/> <br/><br/> <br/><br/> 
+            <p className="overline">Together with our families</p> <br/> <br/><br/> <br/><br/>  <br/> 
             <h1><span>Arsene </span>&<span>ISIMBI</span></h1>
             <div className="hero-rule"><i /><Icon name="heart" size={13} /><i /></div>
             <p className="date" style={{ letterSpacing: "6px", fontSize: "15px", fontWeight: "bold" }}>26 · 12 · 2026</p>
