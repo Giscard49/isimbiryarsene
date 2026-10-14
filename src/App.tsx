@@ -106,7 +106,7 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
 }
 
 const story = [
-  ["01", "How we met", "  We met in high school. We were young, we were growing, and neither of us knew that we had already met the person who would become home."],
+  ["01", "How we met", "  We met in high school in 2015. We were young, still growing and figuring out life, and somewhere along the way, feelings began to unfold without us even realizing it. Little did we know that we had already met the person who would one day become home."],
   ["02", "14 November 2020", "Something changed that day, we just knew. Somehow, we were meant to be together, and so our story began. We grew together, laughed together, learned each other, and chose each other, again and again."],
   ["03", "24 April 2026", "We said YES to the next chapter. An engagement. A promise. A future. And now..."],
   ["04", "26 December 2026", "We get to make that promise before God, our families, and the people we love. What started in high school has brought us here. To always. To forever."],
