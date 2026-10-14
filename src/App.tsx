@@ -12,7 +12,8 @@ import gallery4 from "./assets/gallery4.jpeg";
 import gallery5 from "./assets/gallery5.jpeg";
 import gallery6 from "./assets/gallery6.jpg";
 import invitation from "../public/invitation.pdf";
-import countdownPhoto from "./assets/photo2.jpg";
+import countdownPhoto from "./assets/photo8.jpeg";
+
 
 
 
@@ -28,7 +29,7 @@ gallery2,
 gallery3,
 gallery4,
 gallery5,
-gallery6, 
+photo2, 
   ],
 };
 
