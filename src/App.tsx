@@ -11,7 +11,8 @@ import gallery3 from "./assets/gallery3.jpeg";
 import gallery4 from "./assets/gallery4.jpeg";
 import gallery5 from "./assets/gallery5.jpeg";
 import gallery6 from "./assets/gallery6.jpg";
-import invitation from "./assets/invitation.pdf";
+import invitation from "../public/invitation.pdf";
+import countdownPhoto from "./assets/photo2.jpg";
 
 
 
@@ -105,7 +106,7 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
 }
 
 const story = [
-  ["01", "How we met", "We were young, we were growing, and neither of us knew that we had already met the person who would become home."],
+  ["01", "How we met", "  We met in high school. We were young, we were growing, and neither of us knew that we had already met the person who would become home."],
   ["02", "14 November 2020", "Something changed that day, we just knew. Somehow, we were meant to be together, and so our story began. We grew together, laughed together, learned each other, and chose each other, again and again."],
   ["03", "24 April 2026", "We said YES to the next chapter. An engagement. A promise. A future. And now..."],
   ["04", "26 December 2026", "We get to make that promise before God, our families, and the people we love. What started in high school has brought us here. To always. To forever."],
@@ -223,13 +224,109 @@ function App() {
           <div className="flourish">A <i>♥</i> I</div>
         </section>
 
-        <section className="countdown">
-          <SectionTitle eyebrow="Save the date" light>Until we say “I do”</SectionTitle>
-          <div className="count-grid">
-            {Object.entries(countdown).map(([label, value]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}
-          </div>
-          <p>Dec 26th, 2026 · AT PYRAMIDAL GARDEN (GAHANGA)</p>
-        </section>
+       
+<section
+  className="countdown"
+  style={{
+    position: "relative",
+    backgroundImage: `linear-gradient(rgba(35, 27, 24, 0.48), rgba(35, 27, 24, 0.58)), url(${countdownPhoto})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    color: "#fffaf4",
+    padding: "80px 20px",
+    textAlign: "center",
+  }}
+>
+  <p
+    style={{
+      fontSize: "14px",
+      letterSpacing: "3px",
+      textTransform: "uppercase",
+      color: "#e0c7a2",
+      marginBottom: "18px",
+    }}
+  >
+    Save the date
+  </p>
+
+  <h2
+    style={{
+      fontSize: "clamp(27px, 6vw, 36px)",
+      fontWeight: 400,
+      margin: "0 auto 22px",
+      textTransform: "uppercase",
+    }}
+  >
+    Until we say “I do”
+  </h2>
+
+  <div
+    style={{
+      width: "36px",
+      height: "1px",
+      background: "#e0c7a2",
+      margin: "0 auto 38px",
+    }}
+  />
+
+  <div
+    className="count-grid"
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+      maxWidth: "420px",
+      margin: "0 auto 32px",
+    }}
+  >
+    {Object.entries(countdown).map(([label, value], index) => (
+      <div
+        key={label}
+        style={{
+          padding: "0 5px",
+          borderRight:
+            index < 3 ? "1px solid rgba(255,255,255,0.3)" : "none",
+        }}
+      >
+        <strong
+          style={{
+            display: "block",
+            fontSize: "clamp(24px, 6vw, 36px)",
+            fontWeight: 400,
+            fontVariantNumeric: "tabular-nums",
+          }}
+        >
+          {value}
+        </strong>
+        <span
+          style={{
+            display: "block",
+            marginTop: "10px",
+            fontSize: "8px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            color: "#e0c7a2",
+          }}
+        >
+          {label}
+        </span>
+      </div>
+    ))}
+  </div>
+
+  <p
+    style={{
+      fontSize: "9px",
+      letterSpacing: "1.5px",
+      lineHeight: 1.8,
+      textTransform: "uppercase",
+      margin: 0,
+    }}
+  >
+    Dec 26th, 2026 · At Pyramidal Garden (Gahanga)
+  </p>
+</section>
+
 
         <section className="story section-pad" id="story">
           <SectionTitle eyebrow="Chapter by chapter">Our love story</SectionTitle>
@@ -266,7 +363,7 @@ function App() {
           <div className="schedule-list">
             {[
               ["01", "Introduction & Dowry", "09:00 AM", "Pyramidal Garden Slightly after Nyanza Bus Station", "calendar"],
-              ["02", "Church Wedding", "03:00 PM", "New Life Bible Church", "church"],
+              ["02", "Church Wedding", "02:00 PM", "New Life Bible Church", "church"],
               ["03", "Portraits & Photos", "05:00 PM", "Pyramidal Garden", "camera"],
               ["04", "Reception Wedding", "06:00 PM", "Pyramidal Garden", "music"],
             ].map(([number, title, time, place, icon]) => (
@@ -403,30 +500,29 @@ function App() {
 
     
 
-{/* <a
-  href="/src/assets/invitation.pdf"
-  download="Arsene-and-Isimbi-Wedding-Invitation"
+
+<a
+  href="/invitation.pdf"
+  download="Arsene-and-Isimbi-Wedding-Invitation.pdf"
+  className="download-invitation-btn"
   style={{
-    display: "inline-flex",
+    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     gap: "10px",
     width: "fit-content",
     maxWidth: "90%",
     margin: "0 auto",
-    position: "relative",
-    left: "50%",
-    transform: "translateX(-50%)",
     padding: "14px 18px",
     borderRadius: "18px",
     boxSizing: "border-box",
     textAlign: "center",
   }}
-  className="download-invitation-btn"
 >
   <span className="download-icon" aria-hidden="true">↓</span>
   <span>DOWNLOAD WEDDING INVITATION</span>
-</a> */}
+</a>
+
 
 
 
