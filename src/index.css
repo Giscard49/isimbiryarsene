@@ -290,6 +290,70 @@ footer > p { margin: 0; color: rgba(255,255,255,.7); font-size: 16px; line-heigh
 .faq-answer a[href^="tel:"]:hover {
   color: white;
 }
+
+.download-invitation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+  min-height: 58px;
+  margin: 28px auto 42px;
+  padding: 16px 22px;
+  box-sizing: border-box;
+
+  background: #4b382e;
+  color: #fffaf3;
+  border: 1px solid #4b382e;
+  border-radius: 2px;
+
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+
+  transition: background 0.25s ease, color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.download-invitation-btn:hover {
+  background: transparent;
+  color: #4b382e;
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .download-invitation-btn {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    min-height: 54px;
+    padding: 14px 12px;
+  }
+}
+
+/* Align contact buttons to the left */
+.call-btn,
+.whatsapp-btn {
+  justify-content: center;
+}
+
+/* Keep each contact button group on the left */
+.footer-contact-buttons,
+.contact-buttons {
+  justify-content: flex-start !important;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+
 .footer-contact-buttons {
   display: flex;
   justify-content: center;

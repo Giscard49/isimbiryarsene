@@ -11,6 +11,7 @@ import gallery3 from "./assets/gallery3.jpeg";
 import gallery4 from "./assets/gallery4.jpeg";
 import gallery5 from "./assets/gallery5.jpeg";
 import gallery6 from "./assets/gallery6.jpg";
+import invitation from "./assets/invitation.png";
 
 
 
@@ -397,6 +398,17 @@ function App() {
 
 
         </section>
+
+    
+<a
+  href="/src/assets/invitation.png"
+  download="Arsene-and-Isimbi-Wedding-Invitation"
+  className="download-invitation-btn"
+>
+  <span className="download-icon" aria-hidden="true">↓</span>
+  <span>DOWNLOAD WEDDING INVITATION</span>
+</a>
+
 
         <section className="faq section-pad" id="faq">
           <SectionTitle eyebrow="Good to know">Frequently asked</SectionTitle>
